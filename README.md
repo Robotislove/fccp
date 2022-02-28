@@ -21,10 +21,15 @@ bash clear_car.sh
 里面的内容如下：
 
 gnome-terminal -t "move_base" -x bash -c "bash ./move_base.sh;exec bash;"
+
 gnome-terminal -t "laser_bash" -x bash -c "bash ./laser_bash.sh;exec bash;"
+
 gnome-terminal -t "control_car" -x bash -c "bash ./control.sh;exec bash;"
+
 gnome-terminal -t "set_pose" -x bash -c "bash ./set_target.sh;exec bash;"
+
 gnome-terminal -t "start_target" -x bash -c "bash ./start_target.sh;exec bash;"
+
 roslaunch clean_car_description real_nav.launch
 
 分别启动了底盘驱动、激光雷达、can_node节点、设定目标节点、rviz显示界面。
