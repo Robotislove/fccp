@@ -1,0 +1,1 @@
+rosrun synchronizer_laser_imu can_node;

@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/devel
+
+Name: voxel_grid
+Description: Description of voxel_grid
+Version: 1.16.7
+Cflags: -I/home/liun/catkin_ws_10_23/src/navigation/voxel_grid/include
+Libs: -L${prefix}/lib -lvoxel_grid
+Requires: roscpp

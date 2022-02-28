@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/devel
+
+Name: clean_car_target
+Description: Description of clean_car_target
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

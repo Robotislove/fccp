@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/devel
+
+Name: opencv_tests
+Description: Description of opencv_tests
+Version: 1.13.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="clean_car" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<xacro:include filename="$(find clean_car_description)/urdf/clean_car_body.xacro" />
+	<xacro:include filename="$(find clean_car_description)/urdf/rplidar.xacro" />
+	<xacro:include filename="$(find clean_car_description)/urdf/imu.xacro" />
+	<xacro:include filename="$(find clean_car_description)/urdf/kinect.xacro" />
+
+	<xacro:property name="rplidar_offset_x" value="0" />
+	<xacro:property name="rplidar_offset_y" value="0" />
+	<xacro:property name="rplidar_offset_z" value="0.04" />
+    
+	<xacro:property name="imu_offset_x" value="0.06" />
+	<xacro:property name="imu_offset_y" value="0" />
+	<xacro:property name="imu_offset_z" value="0.028" />
+
+	<xacro:property name="kinect_offset_x" value="-0.06" />
+    <xacro:property name="kinect_offset_y" value="0" />
+    <xacro:property name="kinect_offset_z" value="0.8" />
+
+	<clean_car_body/>
+
+	<!-- rplidar -->
+	<joint name="rplidar_joint" type="fixed">
+		<origin xyz="${rplidar_offset_x} ${rplidar_offset_y} ${rplidar_offset_z}" rpy="0 0 0" />
+		<parent link="base_link"/>
+		<child link="laser_link"/>
+	</joint>
+	<xacro:rplidar prefix="laser"/>
+
+	<joint name="imu_joint" type="fixed">
+		<origin xyz="${imu_offset_x} ${imu_offset_y} ${imu_offset_z}" rpy="0 0 0" />
+		<parent link="base_link"/>
+	<child link="imu_link"/>
+	</joint>
+	<xacro:imu prefix="imu"/>
+
+	<joint name="kinect_frame_joint" type="fixed">
+		<origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 0 0" />
+		<parent link="base_link"/>
+		<child link="camera_link"/>
+    </joint>
+    <xacro:kinect_camera prefix="camera"/>
+
+	
+
+
+</robot>

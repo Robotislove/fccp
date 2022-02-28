@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/devel
+
+Name: laser_scan_matcher_odometry
+Description: Description of laser_scan_matcher_odometry
+Version: 0.0.0
+Cflags: -I/home/liun/catkin_ws_10_23/src/laser_scan_matcher_odometry/include
+Libs: -L${prefix}/lib -llaser_scan_matcher_odometry
+Requires: roscpp nodelet sensor_msgs tf pcl_ros pcl_conversions geometry_msgs nav_msgs

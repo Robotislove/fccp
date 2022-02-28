@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/install
+
+Name: synchronizer_laser_imu
+Description: Description of synchronizer_laser_imu
+Version: 0.1.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp message_runtime

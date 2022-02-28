@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="clean_car_target" name="clean_car_target_node" type="clean_car_target_node" output="screen">
+        <param name="target_file_path" type="string" value="$(find clean_car_target)/data_file/target_pose.csv" />
+    </node>
+</launch>

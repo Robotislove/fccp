@@ -1,0 +1,8 @@
+prefix=/home/liun/catkin_ws_10_23/devel
+
+Name: laser_scan_matcher
+Description: Description of laser_scan_matcher
+Version: 0.3.3
+Cflags: -I/home/liun/catkin_ws_10_23/src/laser_scan_matcher/include
+Libs: -L${prefix}/lib -llaser_scan_matcher
+Requires: roscpp nodelet sensor_msgs tf pcl_ros pcl_conversions geometry_msgs nav_msgs
